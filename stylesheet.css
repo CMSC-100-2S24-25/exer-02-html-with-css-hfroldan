@@ -4,6 +4,7 @@
     --rose: #fac1bb;
     --pink: #8E0045;
     --blue: #8093F1;
+    --border-radius: 12px;
 }
 
 .luxurious-script-regular {
@@ -12,17 +13,27 @@
     font-style: normal;
 }
 
-.lexend {
-    font-family: "Lexend", serif;
+.jost {
+    font-family: "Jost", serif;
     font-optical-sizing: auto;
     font-weight: 100;
     font-style: normal;
-}
+  }
 
 body {
-    font-family: "Lexend";
+    font-family: "Jost";
     background-color: var(--rose);
+}
 
+nav {
+    position: sticky;
+    top: 0;
+    margin: 0.5em;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul {
@@ -36,7 +47,6 @@ li {
 }
 
 li a {
-    display: block;
     color: var(--pink);
     text-align: center;
     padding: 1em;
@@ -48,41 +58,152 @@ header {
     justify-content: flex-start;
     align-items: center;
     color: var(--pink);
+    margin: 3em 0em;
 }
 
 header h1 {
-    font-family: "Luxurious Script";
-    font-size: 10em;
+    font-family: "Luxurious Script", serif;
+    font-size: 12em;
+    text-align: center;
     padding: 0%;
     margin: 0%;
 }
 
 header h2 {
-    font-size: 2em;
+    font-size: 3em;
+    color: var(--white);
+    text-align: center;
+    padding: 0%;
+    margin: -4.5% 0 0 0 ;
+    text-transform: uppercase;
+}
+
+section {
+    color: var(--pink);
+    display: flex;
+    margin: 1em;
+    padding: 0.5em;
+}
+
+.button {
+    text-align: center;
+    background-color: var(--pink);
+    color: var(--white);
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 0.5em 2em;
+}
+
+.contact {
+    justify-content: center;
+    align-content: center;
+    padding: 2em 0em;
+}
+
+.about {
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 10em;
+}
+
+.about h1 {
+    text-transform: uppercase;
+    font-weight: 500;
     padding: 0%;
     margin: 0%;
 }
 
-section button {
-    display: block;
+.about div {
+    flex: 1 0;
+    margin: 1em;
+}
+
+.about #about-1 {
+    text-align: left;
+}
+
+.about #about-2 {
     text-align: center;
-    background-color: var(--pink);
-    color: var(--white);
-    border-radius: 45%;
-    font-weight: 500;
-    font-size: 1em;
+}
+
+.about #about-3 {
+    text-align: right;
+}
+
+.project {
+    flex-wrap: wrap;
+}
+
+.project-card {
+    flex: 1 1 25%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: 2px solid var(--pink);
+    border-radius: var(--border-radius);
+    margin: 0.5em;
     padding: 1em;
 }
 
-section {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+.project-card h1 {
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0%;
+    margin: 0%;
 }
 
-section.about div {
-    padding: 2em;
-    margin: 2em;
+.project-card video {
+    margin: 1em 0em;
+    width: 100%;
+    height: 100%;
+}
+
+.skill-title h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 0%;
+    padding: 0%;
+}
+
+.skills {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--pink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0em 2em;
+    padding: 1em;
+
+}
+
+.skill-title {
+    margin: 3em;
+}
+
+.skill-title h1 {
+    font-size: 3em;
+    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
+    text-align: right;
+}
+
+.skill-title h2 {
+    font-weight: 400;
+    margin: 0%;
+    padding: 0%;
+    text-align: right;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    flex: 1 1 30%;
+    margin: 1em;
+    padding: 1em;
 }
